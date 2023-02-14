@@ -1,9 +1,9 @@
 import "./TodoItem.css";
 
-function TodoItem() {
+function TodoItem({ todo }) {
   return (
     <div>
-      <div>Todo Item</div>
+      <div>{todo.name}</div>
     </div>
   );
 }
