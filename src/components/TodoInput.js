@@ -14,6 +14,7 @@ function TodoInput({ todos, setTodos }) {
     };
     const newTodos = [...todos, newTodo];
     setTodos(newTodos);
+    setTodo("");
   };
 
   return (
