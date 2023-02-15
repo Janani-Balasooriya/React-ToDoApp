@@ -28,11 +28,13 @@
 }
 
 .pencil-button {
+  background-color: #b8e1f5;
   color: #0ea5e9;
-  border: 1px solid #0ea5e9;
+  /* border: 1px solid #0ea5e9; */
 }
 
 .trash-button {
+  background-color: #f7b1bc;
   color: #f43f5e;
-  border: 1px solid #f43f5e;
+  /* border: 1px solid #f43f5e; */
 }
