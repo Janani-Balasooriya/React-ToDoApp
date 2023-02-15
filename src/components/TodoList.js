@@ -12,7 +12,15 @@ function TodoList() {
       <TodoInput todos={todos} setTodos={setTodos} />
       <div className="todo-items-wrapper">
         {todos.map((item, index) => {
-          return <TodoItem index={index + 1} key={item.id} todo={item} />;
+          return (
+            <TodoItem
+              todos={todos}
+              setTodos={setTodos}
+              index={index + 1}
+              key={item.id}
+              todo={item}
+            />
+          );
         })}
       </div>
     </div>
