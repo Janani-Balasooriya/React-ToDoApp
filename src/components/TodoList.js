@@ -7,12 +7,12 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
 
   return (
-    <div>
+    <div className="todo-list-container">
       <h2>My Todos</h2>
       <TodoInput todos={todos} setTodos={setTodos} />
-      <div>
-        {todos.map((item) => {
-          return <TodoItem key={item.id} todo={item} />;
+      <div className="todo-items-wrapper">
+        {todos.map((item, index) => {
+          return <TodoItem index={index + 1} key={item.id} todo={item} />;
         })}
       </div>
     </div>

@@ -18,17 +18,18 @@ function TodoInput({ todos, setTodos }) {
   };
 
   return (
-    <div>
+    <div className="todo-input-wrapper">
       <input
         type="text"
         value={todo}
         onChange={(event) => {
           setTodo(event.target.value);
         }}
+        placeholder="Enter your todo"
       />
 
       <button onClick={handleClick}>
-        <PlusIcon style={{ width: "18px", height: "18px" }} />
+        <PlusIcon className="plus-icon" />
       </button>
     </div>
   );
