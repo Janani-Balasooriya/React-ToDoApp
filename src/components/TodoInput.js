@@ -7,15 +7,16 @@ function TodoInput({ todos, setTodos }) {
   const [todo, setTodo] = useState("");
 
   const handleClick = () => {
-    //id, name, isCompleted
-    const newTodo = {
-      id: v4(),
-      name: todo,
-      isCompleted: false,
-    };
-    const newTodos = [...todos, newTodo];
-    setTodos(newTodos);
-    setTodo("");
+    if (todo.length > 0) {
+      const newTodo = {
+        id: v4(),
+        name: todo,
+        isCompleted: false,
+      };
+      const newTodos = [...todos, newTodo];
+      setTodos(newTodos);
+      setTodo("");
+    }
   };
 
   return (

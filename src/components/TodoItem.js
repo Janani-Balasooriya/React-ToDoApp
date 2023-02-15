@@ -36,10 +36,23 @@ function TodoItem({ todo, index, todos, setTodos }) {
           return item;
         }
       });
-      console.log(newTodos);
       setTodos(newTodos);
       setIsEdit(false);
     }
+  };
+
+  const handleComplete = () => {
+    const newTodos = todos.map((item) => {
+      if (todo.id == item.id) {
+        return {
+          ...item,
+          isCompleted: !item.isCompleted,
+        };
+      } else {
+        return item;
+      }
+    });
+    setTodos(newTodos);
   };
 
   return (
@@ -56,7 +69,14 @@ function TodoItem({ todo, index, todos, setTodos }) {
             onKeyDown={handleSubmit}
           />
         ) : (
-          <div>{todo.name}</div>
+          <div
+            onClick={handleComplete}
+            style={{
+              textDecorationLine: todo.isCompleted ? "line-through" : "none",
+            }}
+          >
+            {todo.name}
+          </div>
         )}
       </div>
       <div className="todo-item-buttons">
