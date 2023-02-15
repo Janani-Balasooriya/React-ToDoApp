@@ -27,6 +27,11 @@ function TodoInput({ todos, setTodos }) {
         onChange={(event) => {
           setTodo(event.target.value);
         }}
+        onKeyDown={(e) => {
+          if (e.keyCode === 13) {
+            return handleClick();
+          }
+        }}
         placeholder="Enter your todo"
       />
 
